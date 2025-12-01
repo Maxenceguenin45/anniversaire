@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joyeux Anniversaire Maureen ! 🎉</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(45deg, #ff6b9d, #c06c84, #6c5ce7, #00b894);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        h1 {
+            font-size: 4em;
+            color: #fff;
+            text-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+            animation: bounce 2s infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .name {
+            font-size: 6em;
+            color: #ffd700;
+            text-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+            animation: wiggle 1s infinite;
+            display: inline-block;
+        }
+
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+        }
+
+        .age {
+            font-size: 5em;
+            color: #fff;
+            background: #ff6b9d;
+            padding: 20px 40px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 30px;
+            animation: spin 3s linear infinite;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg) scale(1); }
+            50% { transform: rotate(180deg) scale(1.2); }
+            100% { transform: rotate(360deg) scale(1); }
+        }
+
+        .date {
+            font-size: 2.5em;
+            color: #fff;
+            background: rgba(0,0,0,0.3);
+            padding: 15px 30px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 20px;
+        }
+
+        .balloon {
+            position: fixed;
+            font-size: 4em;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(100vh) rotate(0deg); }
+            50% { transform: translateY(-20vh) rotate(180deg); }
+        }
+
+        .balloon:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .balloon:nth-child(2) { left: 20%; animation-delay: 1s; }
+        .balloon:nth-child(3) { left: 30%; animation-delay: 2s; }
+        .balloon:nth-child(4) { left: 40%; animation-delay: 0.5s; }
+        .balloon:nth-child(5) { left: 50%; animation-delay: 1.5s; }
+        .balloon:nth-child(6) { left: 60%; animation-delay: 2.5s; }
+        .balloon:nth-child(7) { left: 70%; animation-delay: 3s; }
+        .balloon:nth-child(8) { left: 80%; animation-delay: 1.2s; }
+        .balloon:nth-child(9) { left: 90%; animation-delay: 2.2s; }
+
+        .message {
+            font-size: 2em;
+            color: #fff;
+            margin-top: 30px;
+            animation: flash 2s infinite;
+        }
+
+        @keyframes flash {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .cake {
+            font-size: 8em;
+            animation: shake 0.5s infinite;
+            cursor: pointer;
+            display: inline-block;
+            margin: 20px;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-10deg); }
+            75% { transform: rotate(10deg); }
+        }
+
+        .confetti {
+            position: fixed;
+            font-size: 2em;
+            animation: fall 5s linear infinite;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+        }
+
+        .party {
+            font-size: 3em;
+            display: inline-block;
+            animation: party 1s infinite;
+        }
+
+        @keyframes party {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Ballons flottants -->
+    <div class="balloon">🎈</div>
+    <div class="balloon">🎈</div>
+    <div class="balloon">🎈</div>
+    <div class="balloon">🎈</div>
+    <div class="balloon">🎈</div>
+    <div class="balloon">🎈</div>
+    <div class="balloon">🎈</div>
+    <div class="balloon">🎈</div>
+    <div class="balloon">🎈</div>
+
+    <div class="container">
+        <h1>🎊 JOYEUX ANNIVERSAIRE 🎊</h1>
+        
+        <div class="name">MAUREEN</div>
+        
+        <div class="age">24 ANS!</div>
+        
+        <div class="cake" onclick="celebrate()">🎂</div>
+        
+        <div class="date">📅 8 DÉCEMBRE 2025 📅</div>
+        
+        <div class="message">
+            <span class="party">🎉</span>
+            Profite à fond de ta journée !
+            <span class="party">🎉</span>
+        </div>
+        
+        <div class="message">
+            🥳 Que cette année soit GÉNIALE ! 🥳
+        </div>
+    </div>
+
+    <script>
+        // Créer des confettis aléatoires
+        function createConfetti() {
+            const confettiSymbols = ['🎊', '🎉', '⭐', '✨', '🌟', '💫', '🎈'];
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            confetti.textContent = confettiSymbols[Math.floor(Math.random() * confettiSymbols.length)];
+            confetti.style.left = Math.random() * 100 + 'vw';
+            confetti.style.animationDuration = (Math.random() * 3 + 3) + 's';
+            confetti.style.animationDelay = Math.random() * 2 + 's';
+            document.body.appendChild(confetti);
+            
+            setTimeout(() => confetti.remove(), 8000);
+        }
+
+        // Générer des confettis en continu
+        setInterval(createConfetti, 300);
+
+        // Fonction pour célébrer au clic sur le gâteau
+        function celebrate() {
+            for(let i = 0; i < 30; i++) {
+                setTimeout(createConfetti, i * 50);
+            }
+            alert('🎂 JOYEUX ANNIVERSAIRE MAUREEN ! 🎂\n\n24 ans de PURE FOLIE ! 🥳\n\nQue cette année t\'apporte plein de bonheur ! 💖');
+        }
+
+        // Jouer un son au chargement (optionnel - nécessite interaction utilisateur)
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                if(confirm('🎵 Veux-tu activer la musique d\'anniversaire ? 🎵')) {
+                    // Ici tu peux ajouter un lecteur audio si tu as un fichier MP3
+                    alert('🎶 Imagine "Joyeux Anniversaire" qui joue ! 🎶');
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
